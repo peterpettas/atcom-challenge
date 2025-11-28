@@ -28,7 +28,7 @@ $font-mono: "Roboto Mono", monospace;
 $font-web: "Rethink Sans", sans-serif;
 $font-code: "Reddit Mono", monospace;
 
-$fs-h2: 3.75rem;
+$fs-h2: clamp(3.125rem, 5vw, 3.75rem);
 $fs-body: 0.9375rem;
 $fs-button: 0.875rem;
 $fs-small: 0.75rem;
@@ -50,8 +50,8 @@ $space-sm: 1rem;
 $space-md: 1.5rem;
 $space-lg: 2rem;
 $space-xl: 3rem;
-$space-xxl: 4rem;
-$space-xxxl: 6rem;
+$space-2xl: 4rem;
+$space-3xl: 6rem;
 
 /* ------------------------------
    LAYOUT / GRID
@@ -70,4 +70,4 @@ $bp-xl: 1280px;
 
 $radius-button: 999px;
 
-$shadow-soft: 0px 2px 8px 0px rgba(0, 0, 0, 0.08);
+$shadow-soft: 2px 0px 4px 0px rgba(0, 0, 0, 0.08);

@@ -1,0 +1,421 @@
+@use 'variables' as *;
+
+// Benefits Section
+.benefits {
+  padding: $space-3xl 0;
+  background-color: $color-white;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: $space-3xl;
+
+    @media (min-width: $bp-lg) {
+      flex-direction: row;
+      align-items: stretch;
+      gap: $space-sm;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    
+    @media (min-width: $bp-lg) {
+        max-width: 590px;
+        margin-bottom: 5rem;
+    }
+  }
+
+  &__list {
+    margin-bottom: $space-xl;
+  }
+
+  &__title {
+    font-size: $fs-h2;
+    margin-bottom: 2rem;
+    letter-spacing: -0.03em;
+    
+    @media (min-width: $bp-md) {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__description {
+    color: $color-text-paragraph;
+    margin-bottom: 2.5rem;
+    line-height: $lh-body;
+    max-width: 510px;
+  }
+
+  &__item {
+    display: flex;
+    gap: $space-md;
+    padding: $space-md 0;
+    border-top: 1px solid $color-divider;
+  }
+
+  &__number {
+    font-size: $fs-body;
+    color: $color-text-paragraph;
+    font-weight: 700;
+    min-width: 28px;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    font-size: $fs-body;
+    line-height: $lh-body;
+    font-weight: 400;
+    color: $color-black;
+    max-width: 460px;
+  }
+
+  &__cta {
+    margin-top: $space-lg;
+    color: $color-black;
+    background-color: $color-accent-2;
+    padding: $space-sm $space-md;
+    font-size: $fs-button;
+    font-weight: 600;
+    border-radius: $radius-button;
+  }
+
+  &__slider-wrapper {
+    display: flex;
+    flex: 1;
+
+    @media (min-width: $bp-lg) {
+      max-width: 600px;
+    }
+  }
+}
+
+// Benefits Slider
+.benefits-slider {
+  position: relative;
+  border-radius: 1.875rem;
+  overflow: hidden;
+  background-color: $color-bg;
+  height: 745px;
+
+  @media (min-width: $bp-md) {
+    height: auto;
+  }
+
+  .swiper {
+    height: 100%;
+  }
+
+  .swiper-wrapper {
+    height: 100%;
+  }
+
+  &__slide {
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__navigation {
+    position: absolute;
+    top: $space-md;
+    right: $space-md;
+    z-index: 10;
+    display: flex;
+    gap: $space-xs;
+  }
+
+  &__btn {
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+}
+
+// Specs Section
+.specs {
+  padding: 0 0 $space-3xl 0;
+  background-color: $color-white;
+  
+  &__container {
+    border-top: 1px solid $color-divider;
+    padding-top: $space-3xl;
+    display: flex;
+    flex-direction: column;
+    gap: $space-3xl;
+  }
+
+  &__header {
+    text-align: center;
+    max-width: 740px;
+    margin: 0 auto;
+    gap: $space-lg;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $bp-md) {
+      gap: 2.5rem;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    font-family: $font-mono;
+    font-size: $fs-small;
+    font-weight: 400;
+    color: $color-text-captions;
+    letter-spacing: 0.02em;
+  }
+
+  &__title {
+    font-size: $fs-h2;
+  }
+
+  &__description {
+    color: $color-text-paragraph;
+    line-height: $lh-body;
+    letter-spacing: $ls-tight;
+  }
+
+  &__cta {
+    margin-top: $space-lg;
+    color: $color-black;
+    background-color: $color-accent-2;
+    padding: $space-sm $space-md;
+    font-size: $fs-button;
+    font-weight: 600;
+    border-radius: $radius-button;
+    max-width: fit-content;
+    margin: 0 auto
+  }
+
+  &__table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    min-width: 600px;
+  }
+
+  &__th,
+  &__td {
+    padding: $space-md $space-sm;
+    text-align: left;
+    border-bottom: 1px solid $color-divider;
+
+    @media (min-width: $bp-md) {
+      padding: $space-lg;
+    }
+  }
+
+  &__th {
+    font-family: $font-secondary;
+    font-size: clamp(1.5rem, 2vw, 1.6rem);
+    font-weight: 400;
+    text-align: center;
+    padding-top: $space-lg;
+    padding-bottom: $space-lg;
+    vertical-align: bottom;
+    
+    &--area {
+      border-left: 3px solid $color-black;
+      font-family: $font-body;
+      font-weight: 500;
+      color: $color-black;
+      border: 1px solid $color-divider;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      letter-spacing: $ls-tight;
+    }
+
+    &--competitor {
+      color: $color-text-paragraph;
+      letter-spacing: $ls-tight;
+    }
+  }
+
+  &__competitor-name {
+    font-family: $font-web;
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    &--code {
+      font-family: $font-code;
+    }
+  }
+
+  &__td {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: $fs-body;
+    color: $color-text-paragraph;
+
+    &:last-child {
+      border-left: 1px solid $color-divider;
+    }
+
+    > span {
+      display: inline-flex;
+      align-items: center;
+      font-family: $font-mono;
+      font-size: .6563rem;
+      letter-spacing: -0.04em;
+      font-weight: 400;
+      color: $color-black;
+
+      @media (min-width: $bp-md) {
+        font-size: $fs-small;
+        letter-spacing: $ls-tight;
+      }
+    }
+
+    &--area {
+      border-left: 1px solid $color-divider;
+      border-right: 1px solid $color-divider;
+      box-shadow: $shadow-soft;
+    }
+  }
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    margin-right: $space-sm;
+    flex-shrink: 0;
+
+    &--check::before {
+      content: '';
+      display: block;
+      width: 14px;
+      height: 14px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236F6F6F' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &--cross::before {
+      content: '';
+      display: block;
+      width: 14px;
+      height: 14px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236F6F6F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'/%3E%3Cline x1='6' y1='6' x2='18' y2='18'/%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  tbody tr:last-child {
+    .specs__td--area {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    .specs__td:last-child {
+      border: none;
+      border-left: 1px solid $color-divider;
+    }
+  }
+}
+
+.how-it-works {
+  padding: 0 0 $space-3xl 0;
+  background-color: $color-white;
+
+  &__container {
+    border-top: 1px solid $color-divider;
+    padding-top: $space-3xl;
+    display: flex;
+    flex-direction: column;
+    gap: $space-2xl;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xl;
+
+    @media (min-width: $bp-md) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    font-size: $fs-h2;
+    font-weight: 400;
+    line-height: $lh-headline;
+    margin: 0;
+    letter-spacing: -0.03em;
+  }
+
+  &__cta {
+    align-self: flex-start;
+    color: $color-black;
+    background-color: $color-accent-2;
+    padding: $space-sm $space-md;
+    font-size: $fs-button;
+    font-weight: 600;
+    border-radius: $radius-button;
+
+    @media (min-width: $bp-md) {
+      align-self: center;
+    }
+  }
+
+  &__steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $space-lg;
+
+    @media (min-width: $bp-md) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: $space-xl;
+    }
+  }
+
+  &__step {
+    border-top: 1px solid $color-divider;
+    padding-top: $space-lg;
+  }
+
+  &__number {
+    display: block;
+    font-family: $font-body;
+    font-size: clamp(4rem, 6vw, 4.5rem);
+    font-weight: 400;
+    color: $color-accent-6;
+    margin-bottom: $space-2xl;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  &__step-title {
+    font-family: $font-secondary;
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: $color-black;
+    margin-bottom: $space-md;
+  }
+
+  &__step-text {
+    font-size: $fs-body;
+    color: $color-text-paragraph;
+    line-height: $lh-body;
+    letter-spacing: $ls-tight;
+    max-width: 340px;
+  }
+}
