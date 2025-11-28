@@ -1,0 +1,114 @@
+@use 'variables' as *;
+
+/* Font Faces */
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url('fonts/RobotoMono-Regular.woff2') format('woff2'),
+        url('fonts/RobotoMono-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rethink Sans';
+    src: url('fonts/RethinkSans-Medium.woff2') format('woff2'),
+        url('fonts/RethinkSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('fonts/DMSans-Medium.woff2') format('woff2'),
+        url('fonts/DMSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('fonts/DMSans-Bold.woff2') format('woff2'),
+        url('fonts/DMSans-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('fonts/DMSans-Regular.woff2') format('woff2'),
+        url('fonts/DMSans-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Crimson Text';
+    src: url('fonts/CrimsonText-Regular.woff2') format('woff2'),
+        url('fonts/CrimsonText-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Reddit Mono';
+    src: url('fonts/RedditMono-Medium.woff2') format('woff2'),
+        url('fonts/RedditMono-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	min-height: 100vh;
+	font-family: $font-body;
+	line-height: 1.5;
+	color: $color-text-paragraph;
+	background-color: $color-bg;
+	-webkit-font-smoothing: antialiased;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+button {
+	border: none;
+	background: none;
+	cursor: pointer;
+	font-family: inherit;
+}
+
+:focus-visible {
+	outline: 2px solid $color-accent-2;
+	outline-offset: 2px;
+}

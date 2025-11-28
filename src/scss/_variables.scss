@@ -1,0 +1,73 @@
+/* ------------------------------
+   COLORS
+--------------------------------*/
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+$color-text-headline: #1a1a1a;
+$color-text-paragraph: #6F6F6F;
+$color-text-captions: #485C11;
+$color-text-link: #000000;
+
+$color-bg: $color-white;
+
+$color-accent-2: #DFECC6;
+$color-accent-3: #8E9C78;
+$color-accent-6: #CECECE;
+
+$color-divider: #E9E9E9;
+
+/* ------------------------------
+   TYPOGRAPHY
+--------------------------------*/
+
+$font-body: "DM Sans", sans-serif;
+$font-secondary: "Crimson Text", serif;
+$font-mono: "Roboto Mono", monospace;
+$font-web: "Rethink Sans", sans-serif;
+$font-code: "Reddit Mono", monospace;
+
+$fs-h2: 3.75rem;
+$fs-body: 0.9375rem;
+$fs-button: 0.875rem;
+$fs-small: 0.75rem;
+
+$lh-headline: 0.9;
+$lh-body: 1.4;
+
+$ls-normal: 0;
+$ls-wide: 0.05em;
+$ls-tight: -0.02em;
+
+/* ------------------------------
+   SPACING
+--------------------------------*/
+
+$space-xxs: 0.25rem;
+$space-xs: 0.5rem;
+$space-sm: 1rem;
+$space-md: 1.5rem;
+$space-lg: 2rem;
+$space-xl: 3rem;
+$space-xxl: 4rem;
+$space-xxxl: 6rem;
+
+/* ------------------------------
+   LAYOUT / GRID
+--------------------------------*/
+
+$container-max: 1240px;
+
+$bp-sm: 480px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;
+
+/* ------------------------------
+   SHADOW & RADIUS
+--------------------------------*/
+
+$radius-button: 999px;
+
+$shadow-soft: 0px 2px 8px 0px rgba(0, 0, 0, 0.08);
