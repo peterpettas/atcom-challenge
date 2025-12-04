@@ -1,4 +1,5 @@
 import './scss/main.scss';
+import { inject } from '@vercel/analytics';
 
 import { initSlider } from './js/slider.js';
 import { initScrollAnimations } from "./js/animations.js";
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSlider();
     initScrollAnimations();
     initSmoothScroll();
+    inject();
 });
 
 
